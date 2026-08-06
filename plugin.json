@@ -1,0 +1,17 @@
+{
+  "name": "grok-morph-skills",
+  "version": "1.0.0",
+  "description": "Morph-shared LRR controller, deep-think Diamond-MCTS-R2, deep-research Hourglass-EDC, argueforge v2.1",
+  "skills": [
+    "skills/morph-shared",
+    "skills/deep-think",
+    "skills/deep-research",
+    "skills/argueforge"
+  ],
+  "seals": {
+    "train_ok": false,
+    "measured_omega": false,
+    "G1": "OPEN",
+    "endpointAssumed": false
+  }
+}
