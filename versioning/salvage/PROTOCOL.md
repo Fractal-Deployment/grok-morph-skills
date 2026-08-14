@@ -1,147 +1,94 @@
-# Salvage protocol v2
+# Salvage protocol v2.1
 
 Seals open. No invent-green. train_ok=false · measured_omega=false · G1=OPEN · endpointAssumed=false
 
 Active agent. Not a reporter.
 
 Companion files:
-- `DIAGNOSTIC.md` — class → priority → warrant → lose-if-drop → steelman → action
-- `WORKTREE.md` — local isolation for agent ops
-- `LEDGER.md` — run history
-
----
+- DIAGNOSTIC.md — class → priority → warrant → lose-if-drop → steelman → action
+- WORKTREE.md — local isolation for agent ops
+- APPARMOR.md — Noble host confinement, bwrap profiles, permission rings
+- LEDGER.md — run history
 
 ## Cadence
 
 Hourly heartbeat 06:00–22:00 America/Detroit.
 
-| Condition | Action |
-| --- | --- |
-| No dirty AND last salvage < 3h | CLEAN heartbeat only (1 line). Stop. |
-| Any dirty OR last salvage ≥ 3h | Full protocol |
-| Dirty found before 3h gate | Full protocol anyway |
+- No dirty AND last salvage < 3h → CLEAN heartbeat only. Stop.
+- Any dirty OR last salvage ≥ 3h → full protocol.
+- Dirty found before 3h gate → full protocol anyway.
 
-Prefer 3–4h salvage spacing. Never skip a dirty because the clock is early.
+## Invariant
 
----
-
-## Invariant (non-negotiable)
-
-**Save as much data as possible.**
-
-Never delete, overwrite, or clean a surface until its current bytes are archived.
+Save as much data as possible. Never delete, overwrite, or clean a surface until its current bytes are archived.
 
 If any step is blocked: keep the archive, disclose residual, do not invent a clean state.
 
----
+Never persist kernel.apparmor_restrict_unprivileged_userns=0 to make the agent start. That is a confine-break left dirty, not a clean.
 
 ## Phase contracts
 
-Order is locked. Each phase has an entry condition and exit artifact.
-
 ### 1. DETECT
 
-**Entry:** heartbeat or manual run  
-**Exit artifact:** ordered dirty list `{path, class, evidence, priority, bytes?, unique?}`
+Entry: heartbeat or manual run.
+Exit: ordered dirty list {path, class, evidence, priority, bytes?, unique?}.
 
 Cheap probe first:
-- GitHub: repo trees, recent commits, untracked/uncommitted surfaces when local access exists
-- Drive: `modified_after` last salvage
-- Priority sort: data-at-risk → unversioned → contradiction → orphan → seal-break → invent-green → phantom-mass
+- GitHub trees, recent commits, untracked surfaces when local access exists
+- Drive modified_after last salvage
+- Host AppArmor: sysctl userns + unconfined-restrict, aa-status bwrap, bwrap --unshare-user probe. If userns=1 and profile missing → open confine-break. See APPARMOR.md.
 
-Name only what you can warrant. No invented dirties.
+Priority: data-at-risk → unversioned → confine-break → contradiction → orphan → seal-break → invent-green → phantom-mass
+
+Name only what you can warrant. Host probe without live aa-status must be labeled assumed.
 
 ### 2. ARCHIVE
 
-**Entry:** ≥1 dirty with evidence  
-**Exit artifact:** salvage vault file exists (or full content in run output if push blocked)
+Entry: ≥1 dirty with evidence.
+Exit: salvage vault file exists (or full content in run output if push blocked).
 
-Capture current content (or faithful digest + size + sha for huge files) **before any rewrite**.
+Capture current content before any rewrite.
+Preferred: grok-morph-skills/versioning/salvage/YYYY-MM-DDTHH-MMZ.md
+Fallback: reason-telos-lookup → gist → inline.
 
-Preferred store:
-```
-grok-morph-skills/versioning/salvage/YYYY-MM-DDTHH-MMZ.md
-```
-
-Fallback chain: reason-telos-lookup → gist → inline in run output.
-
-**Hard gate:** do not enter DIAGNOSE/CLEAN without an archive artifact.
+Hard gate: do not enter DIAGNOSE/CLEAN without an archive artifact.
 
 ### 3. DIAGNOSE
 
-**Entry:** archive exists  
-**Exit artifact:** per-dirty diagnosis card
-
-One dirty at a time, highest priority first. For each:
-
-| Field | Meaning |
-| --- | --- |
-| warrant | what is true (evidence-bound) |
-| residual | what is unknown / unsealed |
-| lose-if-drop | what unique data dies if discarded |
-| steelman leave-dirty | strongest case for not cleaning yet |
-
-See `DIAGNOSTIC.md` for class templates. No theater. No extra agents invented.
+Entry: archive exists.
+Exit: per-dirty diagnosis card (warrant, residual, lose-if-drop, steelman).
+One dirty at a time, highest priority first. See DIAGNOSTIC.md.
 
 ### 4. CLEAN
 
-**Entry:** diagnosis complete for the dirty being cleaned  
-**Exit artifact:** status `cleaned` | `residual` + action string
+Entry: diagnosis complete for the dirty being cleaned.
+Exit: status cleaned | residual + action string.
 
-Rules:
 - Relabel invent-green / seal-break. Do not erase the sentence.
-- Contradiction: keep both readings in archive. Promote tighter lock.
+- Contradiction: keep both readings. Promote tighter lock.
 - Orphan: attach to nearest kernel. Do not trash drafts.
-- Phantom-mass: promote densest warrant. Store copies. Do not drop unique clauses.
+- Phantom-mass: promote densest warrant. Store copies.
 - data-at-risk / unversioned: archive is the clean; working copy may stay.
-
-Do not flatten disagreement into silence. Do not drop unique data to make a doc pretty.
+- confine-break: ship scoped bwrap-userns-restrict; enable unconfined-restrict; never global userns=0. Status stays residual until live aa-status.
 
 ### 5. VERSION
 
-**Entry:** at least one archive or clean completed  
-**Exit artifact:** GitHub commit SHA(s) + LEDGER line
-
-Push when necessary:
-1. salvage archive file
-2. any cleaned doc actually edited (SHA required on update)
-3. LEDGER.md append: date, found, archived, cleaned, residual, notes
-
-Commit message: `salvage: <date> <N> found, <A> archived, <C> cleaned`
+Push when necessary: salvage archive, cleaned docs (SHA required), LEDGER append.
+Commit: salvage: <date> <N> found, <A> archived, <C> cleaned
 
 ### 6. VERIFY
 
-**Entry:** VERSION done or blocked with residual  
-**Exit artifact:** status + residual path
+Re-probe cleaned paths. Re-probe bwrap if confine-break was in the run.
 
-Re-probe cleaned paths.
-
-| Status | Meaning |
-| --- | --- |
-| clean | no open high-risk dirty; residuals labeled |
-| residual issues | open residual or weaker readings kept |
-| critical | data-at-risk or unique open dirty remains |
+- clean: no open high-risk dirty; residuals labeled
+- residual issues: open residual or weaker readings kept
+- critical: data-at-risk or unique open dirty remains
 
 If clean is fake, say residual and keep the archive.
 
----
-
-## Output (strict)
-
-```
-STATUS | found | archived | cleaned | pushes | next due
-[ordered dirty table: path | class | action | residual]
-[archive location(s)]
-[residual path]
-```
-
-Be fully agentic. Figure blocked access out. Never ask the user to run commands.
-
----
-
 ## Local agent ops
 
-When running on a Linux host (not only Grok cloud tools):
-- Prefer worktree isolation — see `WORKTREE.md`
-- Archive via `rsync -a --checksum` or `git archive` before any clean write
-- Never `git worktree remove --force` if unpushed commits exist
+- Worktree isolation — WORKTREE.md
+- Confinement — APPARMOR.md. Keep userns restriction on.
+- Archive via rsync -a --checksum or git archive before any clean write
+- Never git worktree remove --force if unpushed commits exist
