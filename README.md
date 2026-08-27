@@ -1,7 +1,7 @@
 # Grok Build Skills Pack — concrete names
 
 **Stamp:** 2026-08-06  
-**Seals:** `train_ok=false` · `measured_omega=false` · `G1=OPEN` · `endpointAssumed=false`
+**State:** Meaning Version: 0.3.4 · unsealed / pure measurement
 
 Skills for Grok.com / Grok Build CLI. **Names describe the job**, not a brand.
 
