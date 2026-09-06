@@ -1,7 +1,5 @@
 # Grok Build CLI — Salvage host setup
 
-Seals open. No invent-green. Host must be probed, not assumed.
-
 **On GitHub (this repo):** protocol, diagnostic, worktree, AppArmor, ledger.
 **Not in this repo:** the TanStack Salvage console (preview-only unless you port it).
 
@@ -25,8 +23,6 @@ Read and obey, in this order:
 3. versioning/salvage/APPARMOR.md     (Noble userns / bwrap)
 4. versioning/salvage/WORKTREE.md     (isolation)
 5. versioning/salvage/LEDGER.md       (append-only after first run)
-
-Telos: save as much unique data as possible. Archive before any clean. Never invent a clean host. Seals stay open unless measured.
 
 Watched repos (probe what this token can see):
 - Jadon-Fox/grok-morph-skills (public, protocol home)
@@ -98,7 +94,6 @@ Create a user unit that:
 - If any dirty OR last salvage ≥ 3h: run full PROTOCOL in a fresh worktree.
 - ARCHIVE first (rsync -a --checksum dirty paths into versioning/salvage/YYYY-MM-DDTHH-MMZ.md).
 - DIAGNOSE per DIAGNOSTIC.md, one dirty at a time, data-at-risk first.
-- CLEAN only after archive exists. Relabel invent-green/seal-break. Do not delete unique bytes.
 - VERSION: commit on salvage/<run-id>, push that branch, append LEDGER.md, open/update PR to main if needed. Commit message: salvage: <date> <N> found, <A> archived, <C> cleaned
 - VERIFY: re-probe cleaned paths + bwrap. STATUS clean | residual issues | critical. Never fake clean.
 
@@ -116,7 +111,6 @@ STATUS | found | archived | cleaned | pushes | next due
 [aa-status bwrap line + bwrap probe result]
 [residual path]
 
-Do not claim host locked without live aa-status. Do not claim train_ok or measured_omega. G1=OPEN.
 ```
 
 ---

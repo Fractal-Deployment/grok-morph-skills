@@ -9,7 +9,6 @@ metadata:
   type: workflow
   version: "2.1"
   short-description: "Expand → disconfirm → rewrite research prompt (hourglass)"
-  seals: train_ok-false measured_omega-false G1-OPEN endpointAssumed-false
   pairs-with: honest-prompt-rewrite, breakthrough-multi-path-thinking, steelman-truth-tournament, llmve-factor-compute, transformer-stage-atlas
   former-name: deep-research
 ---
@@ -27,12 +26,6 @@ Parent controller: **`honest-prompt-rewrite`**.
 | Serious multi-source research | Full hourglass EDC rounds |
 | Quick factual lookup | Light path (1 expand + short LRR) |
 | LLMVE substrate harvest | Stage-aware, NO LLAMA, claim_class |
-
-## Seals / non-claims
-
-```text
-train_ok=false · measured_omega=false · G1=OPEN · endpointAssumed=false
-```
 
 Research synthesis ≠ measured_omega / train_ok / G1 closed.
 
@@ -61,7 +54,6 @@ Disconfirm is load-bearing; expand-only and inductive-only contracts lose.
 
 | Phase | Hourglass role |
 |-------|----------------|
-| 0 Protocol | define research_prompt = telos; hypotheses; inclusion rules; seals |
 | 1 Harvest | EXPAND |
 | 2 ACH / consilience | score diagnosticity; DISCONFIRM built-in |
 | 3 Synthesis | CONTRACT_LRR → may re-EXPAND |
@@ -98,7 +90,6 @@ Reason ⇔ Logic ∧ Semantic integrity ∧ Pattern-under-lock
 4. Morph log of research prompts  
 5. Uncertainties + what would change conclusions  
 6. Open questions  
-7. Seals / non-claims  
 
 ## Chain
 
@@ -111,7 +102,6 @@ honest-prompt-rewrite mode=shared for combined projection
 ## WHEN NOT TO USE
 
 - Pure introspective morph without evidence need → breakthrough-multi-path-thinking  
-- Closing residual seals from literature polish  
 
 ## Resources
 

@@ -2,10 +2,7 @@
 
 Use when the charge is **sensor→factor identity**, jurisdiction, or dual-lane disagreement — not general policy alone.
 
-## Seals (restate every run)
-
 ```text
-train_ok=false · measured_omega=false · G1=OPEN · endpointAssumed=false
 may_multiply_into_omega=false from debate alone
 ```
 
@@ -90,7 +87,6 @@ A high eloquence / low honesty score **must not** win tournament.
 
 ## Output minimum (LLMVE mode)
 
-1. Framing with seals + mode
 2. ACH with dual-lane outcome if used
 3. Top 3 with claim_class + maps_to + apparatus + non_claims
 4. Grand synthesis identity product (or abandon)

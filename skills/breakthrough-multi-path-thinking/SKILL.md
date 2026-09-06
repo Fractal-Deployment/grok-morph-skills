@@ -10,7 +10,6 @@ metadata:
   type: workflow
   version: "2.1"
   short-description: "Multi-path breakthrough reasoning (Diamond-MCTS + LRR)"
-  seals: train_ok-false measured_omega-false G1-OPEN endpointAssumed-false
   pairs-with: honest-prompt-rewrite, evidence-hourglass-research, steelman-truth-tournament, llmve-factor-compute
   former-name: deep-think
 ---
@@ -27,15 +26,6 @@ Parent controller: **`honest-prompt-rewrite`** (load for full state schema + CON
 |-----------|-------------|
 | Breakthrough / hard strategy | Parallel traces + scored morph ops |
 | Adjustable lenses / depth | Direction knobs |
-| Honest residual design | One lever + claim_class, no invent-green |
-
-## Seals / non-claims
-
-```text
-train_ok=false · measured_omega=false · G1=OPEN · endpointAssumed=false
-```
-
-Amazing insight ≠ measured_omega. No invent-green.
 
 ## When to use
 
@@ -76,7 +66,6 @@ Ops:
 
 | Phase | Diamond role |
 |-------|----------------|
-| 0 Framing | define + telos lock + seals |
 | 1 Parallel traces | explore under lenses |
 | 2 Critique / mutate | adapt + redefine |
 | 3 Ground / pre-mortem | optional light external; disconfirm leading candidate |
@@ -114,7 +103,6 @@ this → steelman-truth-tournament (contested)
 3. Morph log highlights  
 4. Falsification / what would change mind  
 5. Open frontiers for research  
-6. Seals / non-claims  
 
 ## WHEN NOT TO USE
 

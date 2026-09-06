@@ -11,7 +11,6 @@ metadata:
   former-name: transformer-matmul-geometry
   version: "1.0.0"
   formula_id: "MVE-2026-07-14-e_sigma_sub-LPT"
-  seals: "train_ok=false · measured_omega scoped · G1=OPEN · no invent-green"
 ---
 
 # Transformer Stage Atlas — full substrate map
@@ -21,12 +20,8 @@ transformers actually compute — every tiny stage, geometry of each matmul,
 odd behaviors, capability levers — so design choices for a better LLM are
 grounded in substrate, not slogans.
 
-**Seals (always):**
-
 ```text
-train_ok=false
 measured_omega only under measured_scope=fixed_hypothesis_*
-G1=OPEN
 may_multiply_into_omega=false on monitors / Jacobian
 fixture ≠ residual science
 NO LLAMA on science path (product_orch apparatus)
@@ -188,4 +183,3 @@ formal substrate (this skill)
 - [ ] Separated structure (F, T_tail, P_L) from telos (f)
 - [ ] Separated ore spectrum from Φ_E / energy identity
 - [ ] claim_class stated (fixture / partial / measured_scope)
-- [ ] seals held; no invent-green

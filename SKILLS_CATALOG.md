@@ -8,7 +8,6 @@ Pick by **what you need done**, not by abstract brand.
 | **breakthrough-multi-path-thinking** | Multi-path breakthrough reasoning (Diamond-MCTS) | Hard strategy, philosophy, design levers with knobs | Simple lookup; residual multiply |
 | **evidence-hourglass-research** | Expand → **disconfirm** → contract research prompt | Contested research, progress charts, light lookup | Pure introspection with no evidence need |
 | **steelman-truth-tournament** | Steelman debate tournament + LLMVE factor-identity mode | ACH/MCDA whitepapers; sensor→factor identity contests | Computing factors from dumps; stage walks |
-| **llmve-factor-compute** | Compute F, T_tail, P_L, Φ_E… from **real dumps** | Boards exist; active calculation only | Debate scores as multiply; invent-green |
 | **transformer-stage-atlas** | Full map of every transformer matmul stage | Design / diagnose substrate; pathologies; levers | Claiming measured_omega from theory |
 
 ## Pipelines
@@ -30,8 +29,3 @@ transformer-stage-atlas           →  stage ID  →  llmve-factor-compute
 | llmve-matmul-algebra | llmve-factor-compute |
 | transformer-matmul-geometry | transformer-stage-atlas |
 
-## Seals (all skills)
-
-```text
-train_ok=false · measured_omega=false (or scoped only) · G1=OPEN · no invent-green
-```

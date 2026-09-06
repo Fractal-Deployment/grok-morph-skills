@@ -1,7 +1,5 @@
 # Salvage protocol v2.1
 
-Seals open. No invent-green. train_ok=false · measured_omega=false · G1=OPEN · endpointAssumed=false
-
 Active agent. Not a reporter.
 
 Companion files:
@@ -38,8 +36,6 @@ Cheap probe first:
 - Drive modified_after last salvage
 - Host AppArmor: sysctl userns + unconfined-restrict, aa-status bwrap, bwrap --unshare-user probe. If userns=1 and profile missing → open confine-break. See APPARMOR.md.
 
-Priority: data-at-risk → unversioned → confine-break → contradiction → orphan → seal-break → invent-green → phantom-mass
-
 Name only what you can warrant. Host probe without live aa-status must be labeled assumed.
 
 ### 2. ARCHIVE
@@ -64,7 +60,6 @@ One dirty at a time, highest priority first. See DIAGNOSTIC.md.
 Entry: diagnosis complete for the dirty being cleaned.
 Exit: status cleaned | residual + action string.
 
-- Relabel invent-green / seal-break. Do not erase the sentence.
 - Contradiction: keep both readings. Promote tighter lock.
 - Orphan: attach to nearest kernel. Do not trash drafts.
 - Phantom-mass: promote densest warrant. Store copies.

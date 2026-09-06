@@ -18,12 +18,8 @@ metadata:
 **SSOT:** `artifacts/LLMVE_Validated_Matmul_Algebra_SSOT.md`  
 **Catalog:** `artifacts/LLMVE_Algebra_Factor_Catalog.md`
 
-## Seals
-
 ```text
-train_ok=false
 measured_omega scoped only
-G1=OPEN
 may_multiply_into_omega=false on monitors
 ```
 

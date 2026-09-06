@@ -24,8 +24,6 @@ root_prompt must:
   - list OPEN items explicitly
 ```
 
-No-reroot inflates fluency and invent-green (sim ablation).
-
 ## Lenses (explore)
 
 first-principles · analogical · counterfactual/pre-mortem · systems · probabilistic · narrative · genius-council

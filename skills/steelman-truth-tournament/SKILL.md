@@ -3,7 +3,6 @@ name: steelman-truth-tournament
 description: >
   Adversarial steelman debate tournament: ACH, pre-mortems, red team, Toulmin,
   Bayesian updates, MCDA scoring, consilience. LLMVE factor-identity mode for
-  sensor→factor contests (dual-lane, three-books, claim_class, no invent-green).
   Pick when you need a truth-seeking crucible or contested factor identity — not
   residual multiply. Aliases: argueforge, whitepaper tournament, deep debate forge,
   LLMVE factor contest, dual-lane identity debate.
@@ -11,28 +10,18 @@ metadata:
   type: workflow
   version: "2.2"
   short-description: "Steelman debate tournament + LLMVE factor-identity mode"
-  seals: train_ok-false measured_omega-false G1-OPEN endpointAssumed-false
   pairs-with: evidence-hourglass-research, llmve-factor-compute, breakthrough-multi-path-thinking, transformer-stage-atlas, honest-prompt-rewrite
   former-name: argueforge
 ---
 
 # Steelman Truth Tournament — truth-seeking crucible
 
-
 Execute this multi-agent protocol for complex, high-stakes, or nuanced prompts where basic debate is insufficient. As Grok, act as **Meta-Orchestrator**: select mode, adapt phases, allocate agents, decide transitions on contention / evidence saturation / convergence, and enforce residual honesty.
 
 **Default mode:** general policy / contested topic debate.  
 **LLMVE mode:** sensor→factor identity contests only (not residual science green).
 
-Prioritize: falsifiability, diagnostic evidence, belief updating, bias mitigation, calibrated confidence, **no invent-green**.
-
-## Seals / non-claims (hard)
-
 ```text
-train_ok = false
-measured_omega = false   (scoped only under fixed_hypothesis when product path claims it)
-G1 = OPEN
-endpointAssumed = false
 may_multiply_into_omega = false from tournament winners alone
 ```
 
@@ -70,7 +59,6 @@ Detail → `references/llmve-factor-contest.md`
 evidence-hourglass-research  →  harvest & ACH substrate
 steelman-truth-tournament     →  identity / jurisdiction only (this skill)
 llmve-factor-compute  →  active calculation from dumps
-breakthrough-multi-path-thinking     →  one lever + falsify table under seals
 ```
 
 ## Dual-lane doctrine
@@ -101,8 +89,6 @@ apparatus: <product_orch dumps | research citation | none>
 non_claims: [not_train_ok, not_measured_omega, not_G1_closed, ...]
 ```
 
-General mode still forbids invent-green on empirical legs; label confidence and what would change the mind.
-
 ---
 
 ## Phase 0: Strategic Framing & Hypothesis Space Definition (Mandatory Start)
@@ -115,7 +101,6 @@ General mode still forbids invent-green on empirical legs; label confidence and 
   - Each hypothesis = one sensor→factor reading: denotation, required_fields, sensors, formula_candidate, apparatus, mass_basis, non_claims.
   - Lock glossary terms before debate (no mid-run symbol drift).
   - Stage-ID optional pointer to `transformer-stage-atlas` 00-stage-matrix when matmul-relevant.
-  - State seals in Framing Document.
 - Output: Framing Document. Broadcast. User may refine.
 
 ## Phase 1: Structured Evidence Collection & ACH Matrix
@@ -143,7 +128,6 @@ General mode still forbids invent-green on empirical legs; label confidence and 
 - Update ACH and belief log after debate.
 - **LLMVE mode add-ons:**
   - Rebuttal must name residual evidence that would kill the factor map.
-  - Pre-mortem invent-green path: "agents treated tournament winner as measured_omega" is a required failure mode to list.
 
 ## Phase 3: Paper Swap, Hostile Refinement & Cross-Impact Analysis
 
@@ -173,7 +157,6 @@ General mode still forbids invent-green on empirical legs; label confidence and 
 5. Uncertainty Reduction & Calibration
 6. Actionability & Implementation Realism (pre-mortem aware)
 7. Ethical / Robustness to Value Disagreements & Edge Cases
-8. **(LLMVE mode)** Residual Honesty — claim_class integrity, three-books, dual-lane, no invent-green
 
 Score finalists; sensitivity on weights; optional pairwise.
 
@@ -183,7 +166,6 @@ Each winner whitepaper:
 
 - Title & One-Sentence Key Judgment
 - Executive Summary (confidence + **claim_class** in LLMVE mode)
-- Background & Framing (KIQs, assumptions, seals)
 - Key Judgments (evidence strength, Toulmin, confidence)
 - ACH / Alternative Views (steel-manned; dual-lane outcome if used)
 - Scenario Analysis & Uncertainties
@@ -243,7 +225,6 @@ Minority reports preserved.
 - Fact consensus / policy divergence → separate clearly.
 - Stagnation → meta-AAR, new hypotheses, or external data hand-off.
 - Mid-run user evidence → update ACH and re-enter affected phases.
-- **Invent-green pressure** → refuse; leave OPEN; document residual.
 
 ## Long-Term Execution
 
@@ -266,4 +247,3 @@ State carries: framing, ACH, beliefs, scores, whitepapers. Commands: next iterat
 
 v2 protocol (ACH, Toulmin, pre-mortem, MCDA, consilience) retained. v2.1 binds product-path residual honesty: dual-lane not dual-proof, three-books unmerged, claim_class on winners, NO LLAMA on science apparatus, and explicit hand-offs so tournament scores never substitute for measured legs.
 
-Execute with precision and residual honesty. Winners are ranked arguments under open seals — never measured \(\Omega\).

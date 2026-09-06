@@ -1,7 +1,5 @@
 # Salvage worktree isolation
 
-Seals open. For local Linux agent ops. Cloud Grok automation does not use worktrees; this is for host-side salvage agents.
-
 ---
 
 ## Why worktrees
