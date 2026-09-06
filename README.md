@@ -45,7 +45,6 @@ transformer-stage-atlas            # stage walk / design
 
 ## Honesty
 
-Morphology and tournaments **do not** close residual seals.  
 Product multiply only via `llmve-factor-compute` on real apparatus.  
 **NO LLAMA** as product_orch science proxy.
 

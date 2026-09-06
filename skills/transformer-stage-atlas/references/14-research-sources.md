@@ -46,4 +46,3 @@ Not exhaustive. Prefer primary geometry papers + project SSOT over blogs.
 2. Add 3–8 lines under the matching reference (or new `15-*.md`).  
 3. Update 00-stage-matrix odd-behavior cell if new pathology.  
 4. If it changes a locked factor formula → **do not** silently edit; open formula_id change + human lock.  
-5. Keep seals; claim_class for any numeric claim.

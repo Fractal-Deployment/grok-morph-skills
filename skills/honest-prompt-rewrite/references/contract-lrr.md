@@ -56,7 +56,6 @@ evidence_id:
 - [ ] ≥1 pattern marker updated (if material exists)
 - [ ] Every evidence line in morph has necessary_because + marker
 - [ ] Open frontiers listed
-- [ ] Seals restated
 - [ ] invent_green risk noted if expansion was creative
 
 ## Fail closed

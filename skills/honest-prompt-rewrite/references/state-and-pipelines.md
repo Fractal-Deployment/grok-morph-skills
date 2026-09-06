@@ -12,8 +12,6 @@
 
 Not measured_omega. Proxies only.
 
-**Think:** MCTS-UCB over {define, redefine, explore, adapt}, branch=4, c≈1.5, **mandatory reroot every 2**. Avoid reroot-every-op (under-explore) and no-reroot (telos drift / invent-green).
-
 **Research:** Expand → Disconfirm → Contract each round. Disconfirm is load-bearing. Expand-only and inductive-only contracts lose badly.
 
 **Contract:** Full LRR beats any single leg; inductive-only worst. Chain best: think LRR → research LRR+disconfirm.
@@ -23,7 +21,6 @@ Not measured_omega. Proxies only.
 ### A — Steer then chart
 1. deep-think morph-diamond (user direction knobs)
 2. pass S (markers, residue, telos) to deep-research hourglass-EDC
-3. final synthesis under seals
 
 ### B — Shared projection
 1. morph-shared expand_policy=shared for N rounds
@@ -39,4 +36,3 @@ Not measured_omega. Proxies only.
 - Contract as naive summary
 - Evidence without warrants
 - Treating marker bank as residual science
-- Dual-proof / invent-green from fluent re-prompt

@@ -10,7 +10,6 @@ metadata:
   type: workflow
   version: "1.1"
   short-description: "Rewrite prompt honestly each round (Logic·Ration·Reason)"
-  seals: train_ok-false measured_omega-false G1-OPEN endpointAssumed-false
   pairs-with: breakthrough-multi-path-thinking, evidence-hourglass-research, steelman-truth-tournament, llmve-factor-compute, transformer-stage-atlas
   former-name: morph-shared
 ---
@@ -25,15 +24,6 @@ Shared spine for **breakthrough-multi-path-thinking** (diamond) and **evidence-h
 |-----------|-------------|
 | A sharper working prompt after each round | Rewrites `root_prompt` under LRR |
 | Think then research without losing state | Holds the shared state object |
-| No invent-green eloquence | Seals every contract |
-
-## Seals / non-claims
-
-```text
-train_ok=false · measured_omega=false · G1=OPEN · endpointAssumed=false
-```
-
-Morphology ≠ measured residual. Pattern markers ≠ product dumps. No invent-green.
 
 ## When to use
 
@@ -48,7 +38,6 @@ Morphology ≠ measured residual. Pattern markers ≠ product dumps. No invent-g
 
 ```text
 S = {
-  telos,                 # immutable success criteria + seals
   root_prompt,           # current best re-rooting of user charge
   expand_policy,         # think | research | shared
   residue_cards[],       # insights / partials
@@ -94,7 +83,6 @@ WARRANTED_EVIDENCE:
     marker: <id>
     source: ...
 OPEN: <frontiers>
-NON_CLAIMS: seals...
 ```
 
 ## Round loop
@@ -107,7 +95,6 @@ for r in 1..budget:
   if think|shared and r % 2 == 0: reroot (telos ⊕ markers ⊕ warrants)
   log morph
 stop: budget | marginal gain low | diagnostic saturation (research)
-emit: synthesis + markers + morph_log + open frontiers + seals
 ```
 
 ## Pipeline (preferred chain)

@@ -51,7 +51,6 @@ Use after stage audit + pathology scan. Propose **one primary lever** per campai
 2. Choose one lever from tables above
 3. Instrument: pre dump → intervene → post dump
 4. Metrics: F, T_tail, P_L, U_W, stable_rank, grade if labeled
-5. claim_class=partial; seals held
 6. Accept / revert; do not multiply into unrestricted Ω
 ```
 

@@ -1,7 +1,5 @@
 # Salvage host AppArmor protocol
 
-Seals open. Host not live-scanned from this file. train_ok=false · endpointAssumed=false
-
 Companion: PROTOCOL.md (DETECT now probes confinement) · DIAGNOSTIC.md (confine-break).
 
 ## Warrant (research, 2026-08)
