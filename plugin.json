@@ -1,7 +1,8 @@
 {
   "name": "grok-morph-skills",
-  "version": "2.0.0",
-  "description": "Concrete-named Grok skills: honest-prompt-rewrite, breakthrough-multi-path-thinking, evidence-hourglass-research, steelman-truth-tournament, llmve-factor-compute, transformer-stage-atlas",
+  "version": "2.0.1",
+  "description": "Concrete-named Grok skills: honest-prompt-rewrite, breakthrough-multi-path-thinking, evidence-hourglass-research, steelman-truth-tournament, llmve-factor-compute, transformer-stage-atlas"
+,
   "skills": [
     "skills/honest-prompt-rewrite",
     "skills/breakthrough-multi-path-thinking",
@@ -9,11 +10,5 @@
     "skills/steelman-truth-tournament",
     "skills/llmve-factor-compute",
     "skills/transformer-stage-atlas"
-  ],
-  "seals": {
-    "train_ok": false,
-    "measured_omega": false,
-    "G1": "OPEN",
-    "endpointAssumed": false
-  }
+  ]
 }
