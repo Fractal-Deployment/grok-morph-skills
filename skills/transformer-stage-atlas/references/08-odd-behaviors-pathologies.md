@@ -47,7 +47,7 @@ Use this as a **diagnostic checklist**, not a green list.
 | Synthetic consistency tax | free≈forced until load rises | candidate \(e^{\sigma}\) |
 | Claim dilution | support_width↑, F_vocab↓, grade↓ | \(C_d\) (needs labels) |
 | Phantom spend | recovery with no usable-W map | \(M_{\mathrm{ph}}\) |
-| Train theater | open_count=0 + dead F | **not** measured_omega |
+| Train theater | open_count=0 + dead F | **not** omega_was_measured |
 
 ---
 

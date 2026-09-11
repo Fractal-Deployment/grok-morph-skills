@@ -27,7 +27,7 @@ Parent controller: **`honest-prompt-rewrite`**.
 | Quick factual lookup | Light path (1 expand + short LRR) |
 | LLMVE substrate harvest | Stage-aware, NO LLAMA, claim_class |
 
-Research synthesis ≠ measured_omega / train_ok / G1 closed.
+Research synthesis ≠ omega_was_measured / training_cleared / G1 closed.
 
 ## Paths
 

@@ -19,7 +19,7 @@ metadata:
 **Catalog:** `artifacts/LLMVE_Algebra_Factor_Catalog.md`
 
 ```text
-measured_omega scoped only
+omega_was_measured scoped only
 may_multiply_into_omega=false on monitors
 ```
 
@@ -53,7 +53,7 @@ N_core   = kappa_disp * K_M * T_tail * F^2
 1. Board / dumps already exist  
 2. Compute factors present  
 3. Missing tax → 1 + placeholder status  
-4. Never invent measured_omega  
+4. Never invent omega_was_measured  
 
 ## Anti-patterns
 

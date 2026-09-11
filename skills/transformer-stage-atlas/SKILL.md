@@ -21,7 +21,7 @@ odd behaviors, capability levers — so design choices for a better LLM are
 grounded in substrate, not slogans.
 
 ```text
-measured_omega only under measured_scope=fixed_hypothesis_*
+omega_was_measured only under measured_scope=fixed_hypothesis_*
 may_multiply_into_omega=false on monitors / Jacobian
 fixture ≠ residual science
 NO LLAMA on science path (product_orch apparatus)
@@ -159,7 +159,7 @@ formal substrate (this skill)
   → residual sensors under product_orch
   → unmerged taxes (M_ph, C_d, e^σ, τ)
   → f(dT/dR) judgment last
-  → never invent measured_omega / train_ok
+  → never invent omega_was_measured / training_cleared
 ```
 
 ---

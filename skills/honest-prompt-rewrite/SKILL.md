@@ -122,7 +122,7 @@ Or single `shared` mode for strong overall projection.
 ## WHEN NOT TO USE
 
 - One-shot factual answer with no iteration needed (just answer).
-- Closing train_ok / measured_omega / G1 from eloquence.
+- Closing training_cleared / omega_was_measured / G1 from eloquence.
 - Substituting morph scores for product_orch residual multiply.
 
 ## Resources

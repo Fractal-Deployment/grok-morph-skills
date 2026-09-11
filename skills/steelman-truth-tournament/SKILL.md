@@ -68,7 +68,7 @@ When two sensors or theories disagree:
 1. State **Lane A** and **Lane B** explicitly (apparatus, formula candidate, claim_class).
 2. Falsify against residual / sample evidence — do not average into green.
 3. Outcomes only: **A wins** | **B wins** | **synthesis** (one product reading) | **abandon** (both refuse).
-4. Never mark dual-proof or `measured_omega` because both lanes are non-null.
+4. Never mark dual-proof or `omega_was_measured` because both lanes are non-null.
 
 ## Three-books lock (LLMVE mode mandatory; general when energy language appears)
 
@@ -86,7 +86,7 @@ No silent merge. \(\Phi_{E3} \propto F(1-C_d)\) is probe only, not energy identi
 claim_class ∈ { refuse, fixture_only, partial, capacity_v2, measured_scope }
 maps_to: <glossary symbol or OPEN>
 apparatus: <product_orch dumps | research citation | none>
-non_claims: [not_train_ok, not_measured_omega, not_G1_closed, ...]
+non_claims: [not_training_cleared, does_not_close_product_omega, not_gate_closed, ...]
 ```
 
 ---
@@ -241,7 +241,7 @@ State carries: framing, ACH, beliefs, scores, whitepapers. Commands: next iterat
 - Active residual multiply from dumps (`llmve-factor-compute`).
 - Stage walk of transformer matmul (`transformer-stage-atlas`).
 - One-lever design without contested identity (`breakthrough-multi-path-thinking` sealed mode).
-- Closing train_ok / measured_omega / G1 from eloquence.
+- Closing training_cleared / omega_was_measured / G1 from eloquence.
 
 ## Why v2.1
 

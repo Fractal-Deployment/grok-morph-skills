@@ -20,7 +20,7 @@ hypothesis_id:
   mass_basis: logsumexp_full | topk_renorm | other_labeled
   maps_to: F | T_tail | P_L | Phi_E | M_ph | C_d | sigma_sub | tau | f_dTdR | OPEN
   claim_class: refuse | fixture_only | partial | capacity_v2 | measured_scope
-  non_claims: [not_train_ok, not_measured_omega, not_G1_closed, not_energy_identity, ...]
+  non_claims: [not_training_cleared, does_not_close_product_omega, not_gate_closed, not_energy_identity, ...]
   falsify_if: <residual observation that kills this map>
 ```
 
@@ -82,7 +82,7 @@ A high eloquence / low honesty score **must not** win tournament.
 - high probability equals asset
 - usable-work language inside P_L
 - dual-proof because both sensors fired
-- setting train_ok or measured_omega from whitepaper polish
+- setting training_cleared or omega_was_measured from whitepaper polish
 - llama pin as orchestrator mass basis
 
 ## Output minimum (LLMVE mode)
@@ -95,4 +95,4 @@ A high eloquence / low honesty score **must not** win tournament.
 
 ## Non-claims
 
-This reference does not close G1, train_ok, or measured_omega. It does not invent residual tensors or attention weights. It does not rewrite formula_id.
+This reference does not close G1, training_cleared, or omega_was_measured. It does not invent residual tensors or attention weights. It does not rewrite formula_id.

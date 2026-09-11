@@ -48,7 +48,7 @@ Taxes **unmerged**. Telos only in \(f\).
 ## Dual
 
 Dual = **theory lanes** (A wins / B wins / synthesis / abandon).  
-Not dual-proof gate for measured_omega.
+Not dual-proof gate for omega_was_measured.
 
 ---
 

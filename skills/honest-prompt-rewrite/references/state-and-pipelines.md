@@ -10,7 +10,7 @@
 
 ## Sim-backed defaults (structural control sims 2026-08-06)
 
-Not measured_omega. Proxies only.
+Not omega_was_measured. Proxies only.
 
 **Research:** Expand → Disconfirm → Contract each round. Disconfirm is load-bearing. Expand-only and inductive-only contracts lose badly.
 

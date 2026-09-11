@@ -108,7 +108,7 @@ this → steelman-truth-tournament (contested)
 
 - Simple lookup → `evidence-hourglass-research` light  
 - Evidence tournament without introspection need → research or steelman  
-- Closing G1 / train_ok from polish  
+- Closing G1 / training_cleared from polish  
 
 ## Resources
 

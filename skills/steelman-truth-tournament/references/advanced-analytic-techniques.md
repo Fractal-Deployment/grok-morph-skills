@@ -59,7 +59,7 @@ Gary Klein's technique to improve forecasting and reduce overconfidence.
 
 **When to use**: Especially on top 2–3 hypotheses in Phase 2 or before final recommendations.
 
-**LLMVE required pre-mortem path**: "Tournament winner was treated as measured_omega / train_ok" — list early signals and mitigations (claim_class discipline, hand-off to compute skill).
+**LLMVE required pre-mortem path**: "Tournament winner was treated as omega_was_measured / training_cleared" — list early signals and mitigations (claim_class discipline, hand-off to compute skill).
 
 ## Multi-Criteria Decision Analysis (MCDA) & Consilience Scoring
 For tournament selection and synthesis.

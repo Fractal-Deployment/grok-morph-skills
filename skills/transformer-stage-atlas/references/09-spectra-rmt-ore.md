@@ -51,7 +51,7 @@ claim_class=partial · maps_to=ore_inventory · not_Phi_E
 | Rank collapse (width/depth) | representations become linearly dependent |
 | stable_rank ≪ budget | update/weight does not use full LoRA/base rank |
 
-Both are inventory signals; neither is train_ok.
+Both are inventory signals; neither is training_cleared.
 
 ---
 
@@ -61,6 +61,6 @@ Both are inventory signals; neither is train_ok.
 spectrum ≠ measured Φ_E
 MP bulk ≠ e^σ friction
 outlier_energy_frac ≠ P_L
-energy_at_r ≠ train_ok
+energy_at_r ≠ training_cleared
 mp_fit=poor ≠ invent structure
 ```
