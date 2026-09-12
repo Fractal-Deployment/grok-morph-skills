@@ -7,7 +7,5 @@ metadata:
   redirects-to: honest-prompt-rewrite
   deprecated: true
 ---
-
 # Redirect: `morph-shared` → `honest-prompt-rewrite`
-
 Use the concrete-named skill **`honest-prompt-rewrite`**.

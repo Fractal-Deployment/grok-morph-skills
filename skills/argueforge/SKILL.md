@@ -7,7 +7,5 @@ metadata:
   redirects-to: steelman-truth-tournament
   deprecated: true
 ---
-
 # Redirect: `argueforge` → `steelman-truth-tournament`
-
 Use the concrete-named skill **`steelman-truth-tournament`**.

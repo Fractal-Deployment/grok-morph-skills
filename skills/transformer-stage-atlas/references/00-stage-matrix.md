@@ -1,12 +1,8 @@
 # Stage matrix — every tiny stage (load first for navigation)
-
-**Skill:** transformer-matmul-geometry  
+**Skill:** transformer-matmul-geometry 
 **Use:** Locate the stage, open the matching deep ref, act.
-
 ---
-
 ## Full stage table
-
 | ID | Stage | Inputs | Matmuls / ops | Outputs | Sensors / observables | Failure modes | Deep ref |
 |----|-------|--------|---------------|---------|----------------------|---------------|----------|
 | S0 | Tokenization | text | BPE/Unigram | token ids | vocab hit rate, split length | over-fragment, OOV | 01 |
@@ -33,43 +29,29 @@
 | S21 | Softmax_V | z | softmax over vocab | \(p\in\Delta^{V-1}\) | F_vocab, T_tail_vocab | uniform / peaky | 07 |
 | S22 | Decode / CE | p, target | sample or CE | token / loss | fight_width, grad topk | train theater | 07 |
 | S23 | Ore spectrum | weights | RSVD + MP null | bulk vs outliers | stable_rank, energy_at_r | treat spectrum as Φ_E | 09 |
-
 ---
-
 ## Front-to-back vs back-to-front
-
 | Direction | Question | Start | End |
 |-----------|----------|-------|-----|
 | **Front→back** | How does a token become a next-token distribution? | S0 | S22 |
 | **Back→front** | Where does gradient / credit land? Which matmul absorbs pressure? | S22 loss | S1 embed |
-
 See `12-front-to-back.md` and `13-back-to-front.md`.
-
 ---
-
 ## Two theaters (hard split)
-
 ```text
-Attention theater:  softmax over positions  →  context routing
-Vocab theater:      softmax over V          →  claim spend
+Attention theater: softmax over positions → context routing
+Vocab theater: softmax over V → claim spend
 ```
-
 Never sell attn FLOPs as claim quality. Never sell top-k accuracy as \(P_L\) without \(F\).
-
 ---
-
 ## Sensor priority when instrumenting a new model
-
-1. S9: true \(F\) from attn rows (not F_proxy from act_l2)  
-2. S21: F_vocab + T_tail_vocab with **logsumexp mass basis** (not topk-renorm)  
-3. S11/S15: stable_rank + MP outliers (ore inventory)  
-4. S12 free vs forced residual (path drag candidate)  
+1. S9: true \(F\) from attn rows (not F_proxy from act_l2) 
+2. S21: F_vocab + T_tail_vocab with **logsumexp mass basis** (not topk-renorm) 
+3. S11/S15: stable_rank + MP outliers (ore inventory) 
+4. S12 free vs forced residual (path drag candidate) 
 5. Only then: join product under fixed hypothesis (H-OMEGA-*)
-
 ---
-
 ## Claim classes
-
 | claim_class | Meaning |
 |-------------|---------|
 | fixture | synthetic / unit geometry |

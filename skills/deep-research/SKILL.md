@@ -7,7 +7,5 @@ metadata:
   redirects-to: evidence-hourglass-research
   deprecated: true
 ---
-
 # Redirect: `deep-research` → `evidence-hourglass-research`
-
 Use the concrete-named skill **`evidence-hourglass-research`**.

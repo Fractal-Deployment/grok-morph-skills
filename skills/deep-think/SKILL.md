@@ -7,7 +7,5 @@ metadata:
   redirects-to: breakthrough-multi-path-thinking
   deprecated: true
 ---
-
 # Redirect: `deep-think` → `breakthrough-multi-path-thinking`
-
 Use the concrete-named skill **`breakthrough-multi-path-thinking`**.

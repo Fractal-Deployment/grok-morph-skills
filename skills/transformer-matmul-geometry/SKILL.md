@@ -7,7 +7,5 @@ metadata:
   redirects-to: transformer-stage-atlas
   deprecated: true
 ---
-
 # Redirect: `transformer-matmul-geometry` → `transformer-stage-atlas`
-
 Use the concrete-named skill **`transformer-stage-atlas`**.

@@ -7,7 +7,5 @@ metadata:
   redirects-to: llmve-factor-compute
   deprecated: true
 ---
-
 # Redirect: `llmve-matmul-algebra` → `llmve-factor-compute`
-
 Use the concrete-named skill **`llmve-factor-compute`**.
