@@ -182,7 +182,7 @@ State carries: framing, ACH, beliefs, scores, whitepapers. Commands: next iterat
 - Simple factual lookup (answer or evidence-hourglass-research alone).
 - Active residual multiply from dumps (`llmve-factor-compute`).
 - Stage walk of transformer matmul (`transformer-stage-atlas`).
-- One-lever design without contested identity (`breakthrough-multi-path-thinking` sealed mode).
+- One-lever design without contested identity (`breakthrough-multi-path-thinking` residual-honest design mode).
 - Closing / / G1 from eloquence.
 ## Why v2.1
 v2 protocol (ACH, Toulmin, pre-mortem, MCDA, consilience) retained. v2.1 binds product-path residual honesty: dual-lane not dual-proof, three-books unmerged, claim_class on winners, NO LLAMA on science apparatus, and explicit hand-offs so tournament scores never substitute for measured legs.

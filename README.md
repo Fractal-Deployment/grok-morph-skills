@@ -1,6 +1,4 @@
 # Grok Build Skills Pack — concrete names
-**Stamp:** 2026-08-06 
-**State:** Meaning Version: 0.3.4 unsealed / pure measurement
 Skills for Grok.com / Grok Build CLI. **Names describe the job**, not a brand.
 See **[SKILLS_CATALOG.md](./SKILLS_CATALOG.md)** for the picker table.
 ## Skills
