@@ -12,7 +12,6 @@ trip_on: <evidence that would trip it, or “none yet”>
 After the action ends, discard the list. The next charge mints its own or has none.
 ## What this is not
 - A standing status block copied onto every turn
-- A JSON `seals:` object in plugin or skill YAML
 - A forever-false flag with no accept path
 - Restored deleted inventory names (tombstone lives only in meaning CHANGELOG / Forge)
 - A constitution, meter, or product leaf
